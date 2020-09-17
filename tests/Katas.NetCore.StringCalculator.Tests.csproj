@@ -12,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Katas.NetCore.StringCalculator">
-      <HintPath>..\src\bin\Debug\netstandard2.1\Katas.NetCore.StringCalculator.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\src\Katas.NetCore.StringCalculator.csproj" />
   </ItemGroup>
 
 </Project>
