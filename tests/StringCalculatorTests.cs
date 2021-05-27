@@ -32,40 +32,60 @@ namespace Katas.NetCore.StringCalculator.Tests
             Assert.Equal(0, result);
         }
 
-        [Fact(Skip="complete previous test first")]
+        [Fact]
         public void Calculate_SingleNumber_ReturnsSameNumber()
         {
             // e.g. "1" = 1
+            StringCalculator calculator = new();
+            int result = calculator.Calculate("1");
+            Assert.Equal(1, result);
+
         }
 
-        [Fact (Skip="complete previous test first")]
+        [Fact]
         public void Calculate_TwoNumbers_ReturnsSum()
         {
             // e.g. "1,2" = 3
+            StringCalculator calculator = new();
+            int result = calculator.Calculate("1,2");
+            Assert.Equal(3, result);
         }
 
-        [Fact(Skip="complete previous test first")]
+        [Fact]
         public void Calculate_FiveNumbers_ReturnsSum()
         {
             // e.g. "1,2,3,4,5" = 15
+            StringCalculator calculator = new();
+            int result = calculator.Calculate("1,2,3,4,5");
+            Assert.Equal(15, result);
         }
 
-        [Fact(Skip="complete previous test first")]
+        [Fact]
         public void Calculate_CanUseAlternativeDelimiters_ReturnsSum()
         {
             // e.g. "1|2|3" = 6
+            StringCalculator calculator = new();
+            int result = calculator.Calculate("1|2|3", '|');
+            Assert.Equal(6, result);
+
         }
 
-        [Fact(Skip="complete previous test first")]
+        [Fact]
         public void Calculate_NumbersLargerThan100_IgnoresOver100sInSum()
         {
             // e.g. "1,2,100" = 3
+            StringCalculator calculator = new();
+            int result = calculator.Calculate("1,2,100");
+            Assert.Equal(3, result);
         }
 
-        [Fact(Skip="complete previous test first")]
+        [Fact]
         public void Calculate_NonNumericValue_ReturnsZero()
         {
             // e.g. "1,Elephant,6" = 0
+            StringCalculator calculator = new();
+            int result = calculator.Calculate("1,Elephant,6");
+            Assert.Equal(0, result);
         }
 
         [Fact(Skip="complete previous test first")]
